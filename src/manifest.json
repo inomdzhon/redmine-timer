@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "background": {
+    "persistent": true,
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "all_frames": false,
+    "matches": ["*://*/issues/*"],
+    "js": ["assets/js/content.js"],
+    "css": ["assets/css/content.css"],
+    "run_at": "document_end"
+  }],
+  "name": "redmine-timer",
+  "version": "0.0.1",
+  "description": "",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "storage",
+    "<all_urls>"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "minimum_chrome_version": "42"
+}

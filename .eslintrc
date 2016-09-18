@@ -1,0 +1,28 @@
+---
+env:
+  browser: true
+  commonjs: true
+  es6: true
+
+extends: eslint:recommended
+
+globals:
+  window: true
+  global: true
+  chrome: true
+  __dirname: true
+
+rules:
+  no-unused-vars:
+  - error
+  - args: none
+  indent:
+  - error
+  - 2
+  linebreak-style:
+  - error
+  - unix
+  semi:
+  - error
+  - always
+  no-console: 0

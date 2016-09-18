@@ -1,0 +1,18 @@
+{% extends 'templates/_layout.twig' %}
+{% block styles %}
+  <link rel="stylesheet" href="assets/css/popup.css">
+{% endblock %}
+{% block content %}
+  <div id="issues-container"></div>
+  {% include 'templates/partials/_issues.twig' %}
+  <div id="filter-template" hidden>
+    <div class="">
+      <select id="">
+        <option value="">{{option}}</option>
+      </select>
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}
+  <script type="text/javascript" src="assets/js/popup.js"></script>
+{% endblock %}

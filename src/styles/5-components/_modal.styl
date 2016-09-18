@@ -1,0 +1,22 @@
+.simple-modal
+  position fixed
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  z-index 9000
+
+  &__inner
+    position relative
+    z-index 10
+    max-width 400px
+    margin 5% auto
+
+  &__overlay
+    position absolute
+    top 0
+    left 0
+    z-index 5
+    width 100vw
+    height 100vh
+    background rgba(255, 255, 255, .5)
