@@ -22,9 +22,7 @@ class Timer {
   }
 
   static countTimestamps(arrTimestamps) {
-    return arrTimestamps.reduce((previousValue, currentValue) => {
-      return previousValue = currentValue - previousValue;
-    });
+    return arrTimestamps.reduce((previousValue, currentValue) => currentValue - previousValue);
   }
 
   static getMillisecondsToHours(milliseconds, timePrecision) {
