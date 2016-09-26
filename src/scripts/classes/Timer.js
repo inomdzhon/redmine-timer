@@ -1,7 +1,7 @@
 'use strict';
 
 class Timer {
-  static makeTimeFromSecond(count) {
+  static makeTimeFromSecond(count = 0) {
     let time   = parseInt(count, 10);
     let hour   = Math.floor(time / 3600);
     let minute = Math.floor((time - 3600 * hour) / 60);
@@ -10,7 +10,7 @@ class Timer {
     return ('0' + hour).slice(-2) + ':' + ('0' + minute).slice(-2) + ':' + ('0' + second).slice(-2);
   }
 
-  static humanDate(timestamps) {
+  static humanDate(timestamps = Date.now()) {
     let date = new Date(timestamps);
 
     return  ('0' + date.getDate()).slice(-2)
@@ -21,15 +21,15 @@ class Timer {
     + ':' + ('0' + date.getSeconds()).slice(-2);
   }
 
-  static countTimestamps(arrTimestamps) {
+  static countTimestamps(arrTimestamps = [0]) {
     return arrTimestamps.reduce((previousValue, currentValue) => currentValue - previousValue);
   }
 
-  static getMillisecondsToHours(milliseconds, timePrecision) {
+  static getMillisecondsToHours(milliseconds = 0, timePrecision = 0) {
     return (milliseconds / Timer.MILLISECONDS_IN_HOUR).toFixed(timePrecision);
   }
 
-  static getMillisecondsToSeconds(milliseconds) {
+  static getMillisecondsToSeconds(milliseconds = 0) {
     return (milliseconds / Timer.MILLISECONDS);
   }
 
